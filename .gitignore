@@ -1,0 +1,39 @@
+#Node Modules
+node_modules
+
+# Build directories
+build/
+
+# Build output
+.next/
+out/
+
+# Log files
+*.log
+
+# Dependency directories
+/.pnp/
+/.pnp.js
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Next.js build cache
+.next/cache
+
+# Mac system files
+.DS_Store
+
+# IDE/Editor files
+.vscode/
+.idea/
+
+# Yarn integrity file
+.yarn-integrity
+
+# npm package lock
+package-lock.json
+
