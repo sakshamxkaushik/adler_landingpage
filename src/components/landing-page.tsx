@@ -1,45 +1,61 @@
-'use client'
+"use client";
 
-import React, { useState, useEffect } from 'react'
-import Image from 'next/image'
-import { Button } from "@/components/ui/button"
-import { ArrowRight, ChevronLeft, ChevronRight, Palette, Box, Share2, FileText, Bell, Download, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react'
-import Link from 'next/link'
-import Logo from "./logo.png"
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import {
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  Palette,
+  Box,
+  Share2,
+  FileText,
+  Bell,
+  Download,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+} from "lucide-react";
+import Link from "next/link";
+import Logo from "./logo.png";
 
 const heroSlides = [
   {
     title: "Welcome to Adler",
     description: "Create Immersive 3D Digital Spaces",
-    image: "/placeholder.svg?height=600&width=1200"
+    image: "/placeholder.svg?height=600&width=1200",
   },
   {
     title: "Revolutionize Your Digital Experience",
     description: "Design, Build, and Share in 3D",
-    image: "/placeholder.svg?height=600&width=1200"
+    image: "/placeholder.svg?height=600&width=1200",
   },
   {
     title: "Join the 3D Revolution",
     description: "Transform Your Ideas into Reality",
-    image: "/placeholder.svg?height=600&width=1200"
-  }
-]
+    image: "/placeholder.svg?height=600&width=1200",
+  },
+];
 
 const HeroSlider = () => {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length)
-  }
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+  };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)
-  }
+    setCurrentSlide(
+      (prev) => (prev - 1 + heroSlides.length) % heroSlides.length
+    );
+  };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000)
-    return () => clearInterval(timer)
-  }, [])
+    const timer = setInterval(nextSlide, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="relative w-full h-[600px] overflow-hidden">
@@ -47,7 +63,7 @@ const HeroSlider = () => {
         <div
           key={index}
           className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0'
+            index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
           <Image
@@ -80,64 +96,111 @@ const HeroSlider = () => {
         <ChevronRight className="text-gray-800" size={24} />
       </button>
     </div>
-  )
-}
+  );
+};
 
-const FeatureCard = ({ icon: Icon, title, description, link }) => (
+type FeatureCardProps = {
+  icon: React.ElementType;  // React.ElementType can be used for a component or an element
+  title: string;
+  description: string;
+  link?: string;
+};
+
+const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, description, link = "#" }) => (
   <div className="bg-white rounded-lg shadow-xl p-6 transform transition-all duration-300 hover:scale-105 border border-gray-200">
     <div className="w-16 h-16 bg-[#FC2D7C] rounded-full flex items-center justify-center mb-4">
       <Icon className="text-white" size={32} />
     </div>
     <h3 className="text-2xl font-bold mb-2 text-gray-800">{title}</h3>
     <p className="text-gray-600 mb-4">{description}</p>
-    <Link href={link} className="text-[#FC2D7C] hover:underline">Learn More</Link>
+    <Link href={link} className="text-[#FC2D7C] hover:underline">
+      Learn More
+    </Link>
   </div>
-)
+);
 
 export function LandingPage() {
   return (
     <div className="min-h-screen font-sans bg-white text-gray-800">
       <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-10">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Image
-            src={Logo}
-            alt="Adler Logo"
-            width={120}
-            height={40}
-          />
+          <Image src={Logo} alt="Adler Logo" width={120} height={40} />
           <nav>
             <ul className="flex space-x-4">
-              <li><a href="#features" className="text-gray-600 hover:text-[#FC2D7C]">Features</a></li>
-              <li><a href="#ir" className="text-gray-600 hover:text-[#FC2D7C]">IR</a></li>
-              <li><a href="#about" className="text-gray-600 hover:text-[#FC2D7C]">About</a></li>
-              <li><a href="#contact" className="text-gray-600 hover:text-[#FC2D7C]">Contact</a></li>
-              <li><a href="https://adler3d.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#FC2D7C]">Adler 3D</a></li>
-              <li><a href="https://forms.gle/yourGoogleFormLink" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#FC2D7C]">We're Hiring</a></li>
+              <li>
+                <a
+                  href="#features"
+                  className="text-gray-600 hover:text-[#FC2D7C]"
+                >
+                  Features
+                </a>
+              </li>
+              <li>
+                <a href="#ir" className="text-gray-600 hover:text-[#FC2D7C]">
+                  IR
+                </a>
+              </li>
+              <li>
+                <a href="#about" className="text-gray-600 hover:text-[#FC2D7C]">
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  className="text-gray-600 hover:text-[#FC2D7C]"
+                >
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://adler3d.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-[#FC2D7C]"
+                >
+                  Adler 3D
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://docs.google.com/forms/d/1C84KVIRhY3ul0OsPF1BJEhcNWi3Za9P3u6xMQcwD9-c/edit"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-[#FC2D7C]"
+                >
+                  We're Hiring
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
       </header>
 
-      <main className="pt-16"> {/* Add padding-top to account for fixed header */}
+      <main className="pt-16">
+        {" "}
+        {/* Add padding-top to account for fixed header */}
         <HeroSlider />
-
         <section id="features" className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Unleash Your Creativity</h2>
+            <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
+              Unleash Your Creativity
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <FeatureCard 
+              <FeatureCard
                 icon={Palette}
                 title="Design"
                 description="Create stunning 3D designs with our intuitive tools."
                 link="#"
               />
-              <FeatureCard 
+              <FeatureCard
                 icon={Box}
                 title="Build"
                 description="Construct your virtual space with powerful building blocks."
                 link="#"
               />
-              <FeatureCard 
+              <FeatureCard
                 icon={Share2}
                 title="Share"
                 description="Invite others to explore your creation."
@@ -146,24 +209,25 @@ export function LandingPage() {
             </div>
           </div>
         </section>
-
         <section id="ir" className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Investor Relations</h2>
+            <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
+              Investor Relations
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <FeatureCard 
+              <FeatureCard
                 icon={FileText}
                 title="IR Information"
                 description="Access our latest financial reports and investor information."
                 link="#"
               />
-              <FeatureCard 
+              <FeatureCard
                 icon={Bell}
                 title="Announcements"
                 description="Stay updated with our latest company announcements."
                 link="#"
               />
-              <FeatureCard 
+              <FeatureCard
                 icon={Download}
                 title="Request IR Material"
                 description="Download or request additional investor relations materials."
@@ -172,18 +236,27 @@ export function LandingPage() {
             </div>
           </div>
         </section>
-
         <section id="about" className="py-20 bg-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold text-gray-800 mb-8">About Us</h2>
             <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-              Adler is revolutionizing the way we interact with digital spaces. Our mission is to empower creators and businesses to build immersive 3D experiences that captivate and inspire.
+              Adler is revolutionizing the way we interact with digital spaces.
+              Our mission is to empower creators and businesses to build
+              immersive 3D experiences that captivate and inspire.
             </p>
             <div className="flex justify-center space-x-6">
-              <a href="#" className="text-gray-400 hover:text-[#FC2D7C]"><Facebook size={24} /></a>
-              <a href="#" className="text-gray-400 hover:text-[#FC2D7C]"><Twitter size={24} /></a>
-              <a href="#" className="text-gray-400 hover:text-[#FC2D7C]"><Linkedin size={24} /></a>
-              <a href="#" className="text-gray-400 hover:text-[#FC2D7C]"><Instagram size={24} /></a>
+              <a href="#" className="text-gray-400 hover:text-[#FC2D7C]">
+                <Facebook size={24} />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-[#FC2D7C]">
+                <Twitter size={24} />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-[#FC2D7C]">
+                <Linkedin size={24} />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-[#FC2D7C]">
+                <Instagram size={24} />
+              </a>
             </div>
           </div>
         </section>
@@ -207,12 +280,22 @@ export function LandingPage() {
           <div className="mt-8 text-center">
             <p>&copy; 2024 Adler. All rights reserved.</p>
             <div className="mt-4">
-              <Link href="#" className="mx-2 hover:underline hover:text-[#FC2D7C]">Privacy Policy</Link>
-              <Link href="#" className="mx-2 hover:underline hover:text-[#FC2D7C]">Terms of Service</Link>
+              <Link
+                href="#"
+                className="mx-2 hover:underline hover:text-[#FC2D7C]"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="#"
+                className="mx-2 hover:underline hover:text-[#FC2D7C]"
+              >
+                Terms of Service
+              </Link>
             </div>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
