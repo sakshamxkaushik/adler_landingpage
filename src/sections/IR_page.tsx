@@ -1,4 +1,4 @@
-import Investor from '../assets/investor'
+
 export const IR_page = () => {
   return (
     <section className=" dark:bg-gray-900">

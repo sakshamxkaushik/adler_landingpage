@@ -34,6 +34,4 @@ out/
 # Yarn integrity file
 .yarn-integrity
 
-# npm package lock
-package-lock.json
 
