@@ -1,14 +1,15 @@
-import { Landing } from "@/sections/modern-landing-page";
+import { LandingPage } from "@/components/landing-page";
 import { Header } from "@/sections/Header";
-import { HeroSection } from "@/sections/Hero";
 import { IR_page } from "@/sections/IR_page";
+import { HeroSection } from "@/sections/Hero";
 
 
 
 export default function Home() {
   return (
     <div>
-      <Landing />
+  
+      <LandingPage />
       <Header />
       <HeroSection />
       <IR_page />

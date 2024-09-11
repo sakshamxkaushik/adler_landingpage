@@ -3,7 +3,7 @@ import Logo from '../assets/images/logo.png';
 
 export const HeroSection = () => {
   return (
-    <section className="   bg-gradient-to-b from-blue-50 to-gray-100 py-16 lg:py-24">
+    <section className="   bg-gradient-to-b  py-16 lg:py-24">
       <div className=" container mx-auto px-4 flex flex-col items-center justify-center text-center">
         {/* Logo Section */}
         <div className="relative w-40 h-40 lg:w-56 lg:h-56 mb-8   overflow-hidden">
@@ -16,10 +16,10 @@ export const HeroSection = () => {
         </div>
 
         {/* Hero Text */}
-        <h1 className="text-4xl lg:text-6xl font-extrabold text-gray-800 mb-4 tracking-tight">
+        <h1 className="text-4xl lg:text-6xl font-extrabold text-white-800 mb-4 tracking-tight">
           Let's Build Something Amazing Together
         </h1>
-        <p className="text-lg lg:text-xl text-gray-600 max-w-2xl">
+        <p className="text-lg lg:text-xl text-white-600 max-w-2xl">
           Unlock your next project’s potential with immersive and interactive experiences. Adler is ready to help you make it happen.
         </p>
 

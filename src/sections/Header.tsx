@@ -1,7 +1,10 @@
+
 export const Header = () => {
   return (
-    <div className="flex justify-center items-center relative top-3">
-      <nav className="flex gap-1 p-0.5 border-white/15 rounded-full bg-white/10 backdrop-blur " >
+
+
+    <div className="flex justify-center items-center relative top-5">
+      <nav className="flex gap-8 p-2 border-white/20 rounded-full bg-white/40 backdrop-blur " >
         <a href="#" className="nav-item">
           ADLERVerse!
         </a>
