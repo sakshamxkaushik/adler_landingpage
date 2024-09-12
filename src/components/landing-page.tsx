@@ -25,8 +25,6 @@ import Timesquare2 from "../assets/timesquare/2.png";
 import Timesquare3 from "../assets/timesquare/3.jpg";
 
 
-
-
 const heroSlides = [
   {
     title: "Welcome to Adler",
@@ -133,52 +131,55 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 );
 
 export function LandingPage() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <div className="min-h-screen font-sans bg-white text-gray-800">
-      <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-10">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Image src={Logo} alt="Adler Logo" width={120} height={40} />
-          <nav>
-            <ul className="flex space-x-4">
-              <li>
-                <a
-                  href="#features"
-                  className="text-gray-600 hover:text-[#FC2D7C]"
-                >
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#ir" className="text-gray-600 hover:text-[#FC2D7C]">
-                  IR
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="text-gray-600 hover:text-[#FC2D7C]">
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  className="text-gray-600 hover:text-[#FC2D7C]"
-                >
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://adler3d.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-[#FC2D7C]"
-                >
-                  Adler 3D
-                </a>
-              </li>
-            </ul>
-          </nav>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg shadow-sm">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center py-4">
+            <Link href="/" className="flex-shrink-0">
+              <Image
+                src={Logo}
+                alt="Adler Logo"
+                width={100}
+                height={33}
+              />
+            </Link>
+            <nav className="hidden md:flex space-x-8">
+              <Link href="#features" className="text-sm font-medium text-gray-600 hover:text-[#FC2D7C] transition-colors">Features</Link>
+              <Link href="#ir" className="text-sm font-medium text-gray-600 hover:text-[#FC2D7C] transition-colors">IR</Link>
+              <Link href="#about" className="text-sm font-medium text-gray-600 hover:text-[#FC2D7C] transition-colors">About</Link>
+              <Link href="#contact" className="text-sm font-medium text-gray-600 hover:text-[#FC2D7C] transition-colors">Contact</Link>
+              <Link href="https://adler3d.com" className="text-sm font-medium text-gray-600 hover:text-[#FC2D7C] transition-colors">Adler 3D</Link>
+              </nav>
+            <button className="bg-gradient-to-r from-[#FC2D7C] to-[#FF6B6B] text-white px-6 py-2 rounded-md text-sm font-medium hover:from-[#FF6B6B] hover:to-[#FC2D7C] transition-all duration-300 shadow-md hover:shadow-lg">
+              GET IN TOUCH
+            </button>
+          </div>
         </div>
+        {isMenuOpen && (
+          <div className="md:hidden bg-white shadow-md">
+            <nav className="container mx-auto px-4 py-4">
+              <Link href="#features" className="block py-2 text-sm font-medium text-gray-600 hover:text-[#FC2D7C] transition-colors">Features</Link>
+              <Link href="#ir" className="block py-2 text-sm font-medium text-gray-600 hover:text-[#FC2D7C] transition-colors">IR</Link>
+              <Link href="#about" className="block py-2 text-sm font-medium text-gray-600 hover:text-[#FC2D7C] transition-colors">About</Link>
+              <Link href="#contact" className="block py-2 text-sm font-medium text-gray-600 hover:text-[#FC2D7C] transition-colors">Contact</Link>
+              <Link href="https://adler3d.com" className="block py-2 text-sm font-medium text-gray-600 hover:text-[#FC2D7C] transition-colors">Adler 3D</Link>
+              <Button className="mt-4 w-full bg-[#FC2D7C] hover:bg-[#E0256D] text-white">
+                We're Hiring
+              </Button>
+            </nav>
+          </div>
+        )}
       </header>
 
       <main className="pt-16">
@@ -266,36 +267,12 @@ export function LandingPage() {
       </main>
 
       <footer id="contact" className="bg-gray-100 text-gray-600 py-8">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-              <p>Email: info@adler.com</p>
-              <p>Phone: +1 (123) 456-7890</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Office Address</h3>
-              <p>123 Adler Street</p>
-              <p>Tech City, IN 12345</p>
-              <p>United States</p>
-            </div>
-          </div>
-          <div className="mt-8 text-center">
-            <p>&copy; 2024 Adler. All rights reserved.</p>
-            <div className="mt-4">
-              <Link
-                href="#"
-                className="mx-2 hover:underline hover:text-[#FC2D7C]"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="#"
-                className="mx-2 hover:underline hover:text-[#FC2D7C]"
-              >
-                Terms of Service
-              </Link>
-            </div>
+        <div className="container mx-auto px-4 text-center">
+          <p>&copy; 2024 Adler. All rights reserved.</p>
+          <div className="mt-4">
+            <Link href="#" className="mx-2 hover:underline hover:text-[#FC2D7C]">Privacy Policy</Link>
+            <Link href="#" className="mx-2 hover:underline hover:text-[#FC2D7C]">Terms of Service</Link>
+            <Link href="#" className="mx-2 hover:underline hover:text-[#FC2D7C]">Contact Us</Link>
           </div>
         </div>
       </footer>

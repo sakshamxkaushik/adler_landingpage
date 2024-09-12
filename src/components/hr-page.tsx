@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Users, Heart, Briefcase, GraduationCap, LucideIcon } from 'lucide-react'
 import Link from 'next/link'
-import Logo from '@/assets/images/logo.png'
+import Culture from '@/assets/images/memoji-computer.png'
 
 interface JobListingProps {
   title: string;
@@ -44,21 +44,9 @@ export function HrPage() {
       <header className="bg-white shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/">
-            <Image
-              src={Logo}
-              alt="Adler Logo"
-              width={120}
-              height={40}
-            />
+           
           </Link>
-          <nav>
-            <ul className="flex space-x-4">
-              <li><Link href="/" className="text-gray-600 hover:text-[#FC2D7C]">Home</Link></li>
-              <li><Link href="#openings" className="text-gray-600 hover:text-[#FC2D7C]">Job Openings</Link></li>
-              <li><Link href="#culture" className="text-gray-600 hover:text-[#FC2D7C]">Our Culture</Link></li>
-              <li><Link href="#benefits" className="text-gray-600 hover:text-[#FC2D7C]">Benefits</Link></li>
-            </ul>
-          </nav>
+         
         </div>
       </header>
 
@@ -107,7 +95,7 @@ export function HrPage() {
               </div>
               <div className="relative h-[400px]">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src={Culture}
                   alt="Adler Team"
                   layout="fill"
                   objectFit="cover"
