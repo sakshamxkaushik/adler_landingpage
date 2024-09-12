@@ -159,7 +159,7 @@ export function LandingPage() {
               <Link href="#ir" className="text-sm font-medium text-gray-600 hover:text-[#FC2D7C] transition-colors">IR</Link>
               <Link href="#about" className="text-sm font-medium text-gray-600 hover:text-[#FC2D7C] transition-colors">About</Link>
               <Link href="#contact" className="text-sm font-medium text-gray-600 hover:text-[#FC2D7C] transition-colors">Contact</Link>
-              <Link href="https://adler3d.com" className="text-sm font-medium text-gray-600 hover:text-[#FC2D7C] transition-colors">Adler 3D</Link>
+              <Link href="https://adler3d.com" className="text-sm font-bold text-gray-600 hover:text-[#FC2D7C] transition-colors">Adler 3D</Link>
               </nav>
             <button className="bg-gradient-to-r from-[#FC2D7C] to-[#FF6B6B] text-white px-6 py-2 rounded-md text-sm font-medium hover:from-[#FF6B6B] hover:to-[#FC2D7C] transition-all duration-300 shadow-md hover:shadow-lg">
               GET IN TOUCH
@@ -173,7 +173,10 @@ export function LandingPage() {
               <Link href="#ir" className="block py-2 text-sm font-medium text-gray-600 hover:text-[#FC2D7C] transition-colors">IR</Link>
               <Link href="#about" className="block py-2 text-sm font-medium text-gray-600 hover:text-[#FC2D7C] transition-colors">About</Link>
               <Link href="#contact" className="block py-2 text-sm font-medium text-gray-600 hover:text-[#FC2D7C] transition-colors">Contact</Link>
-              <Link href="https://adler3d.com" className="block py-2 text-sm font-medium text-gray-600 hover:text-[#FC2D7C] transition-colors">Adler 3D</Link>
+              <Link href="https://adler3d.com">
+  <a className="block py-2 text-sm font-bold text-gray-800 hover:text-[#FC2D7C] transition-colors">Adler 3D</a>
+</Link>
+
               <Button className="mt-4 w-full bg-[#FC2D7C] hover:bg-[#E0256D] text-white">
                 We're Hiring
               </Button>
