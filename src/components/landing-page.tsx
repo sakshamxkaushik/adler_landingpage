@@ -176,16 +176,6 @@ export function LandingPage() {
                   Adler 3D
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://docs.google.com/forms/d/1C84KVIRhY3ul0OsPF1BJEhcNWi3Za9P3u6xMQcwD9-c/edit"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-[#FC2D7C]"
-                >
-                  We're Hiring
-                </a>
-              </li>
             </ul>
           </nav>
         </div>

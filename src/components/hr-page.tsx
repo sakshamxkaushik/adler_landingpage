@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Users, Heart, Briefcase, GraduationCap, LucideIcon } from 'lucide-react'
 import Link from 'next/link'
+import Logo from '@/assets/images/logo.png'
 
 interface JobListingProps {
   title: string;
@@ -44,7 +45,7 @@ export function HrPage() {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/">
             <Image
-              src=""
+              src={Logo}
               alt="Adler Logo"
               width={120}
               height={40}
@@ -66,9 +67,11 @@ export function HrPage() {
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl font-bold mb-4">Join the Adler Team</h1>
             <p className="text-xl mb-8">Shape the future of 3D digital spaces and be part of something extraordinary</p>
-            <Button className="bg-white text-[#FC2D7C] hover:bg-gray-100">
+            <a href="https://docs.google.com/forms/d/1C84KVIRhY3ul0OsPF1BJEhcNWi3Za9P3u6xMQcwD9-c">
+            <Button className="bg-white text-[#FC2D7C] hover:bg-gray-300" >
               View Open Positions <ArrowRight className="ml-2" />
             </Button>
+            </a>
           </div>
         </section>
 
