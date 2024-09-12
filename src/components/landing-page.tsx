@@ -20,22 +20,28 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Logo from "./logo.png";
+import Timesquare1 from "../assets/timesquare/1.jpg";
+import Timesquare2 from "../assets/timesquare/2.png";
+import Timesquare3 from "../assets/timesquare/3.jpg";
+
+
+
 
 const heroSlides = [
   {
     title: "Welcome to Adler",
     description: "Create Immersive 3D Digital Spaces",
-    image: "/placeholder.svg?height=600&width=1200",
-  },
+    image: Timesquare1,
+  }, // Corrected },
   {
     title: "Revolutionize Your Digital Experience",
     description: "Design, Build, and Share in 3D",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: Timesquare2, // Remove curly braces
   },
   {
     title: "Join the 3D Revolution",
     description: "Transform Your Ideas into Reality",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: Timesquare3, // No curly braces
   },
 ];
 
@@ -76,9 +82,11 @@ const HeroSlider = () => {
             <div className="text-center text-white">
               <h1 className="text-5xl font-bold mb-4">{slide.title}</h1>
               <p className="text-xl mb-8">{slide.description}</p>
-              <Button className="bg-[#FC2D7C] hover:bg-[#E0256D] text-white">
-                Get Started <ArrowRight className="ml-2" />
-              </Button>
+              <Link href="https://www.adler3d.com/ko/accounts/login">
+                <Button className="bg-[#FC2D7C] hover:bg-[#E0256D] text-white">
+                  Get Started <ArrowRight className="ml-2" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -100,13 +108,18 @@ const HeroSlider = () => {
 };
 
 type FeatureCardProps = {
-  icon: React.ElementType;  // React.ElementType can be used for a component or an element
+  icon: React.ElementType; // React.ElementType can be used for a component or an element
   title: string;
   description: string;
   link?: string;
 };
 
-const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, description, link = "#" }) => (
+const FeatureCard: React.FC<FeatureCardProps> = ({
+  icon: Icon,
+  title,
+  description,
+  link = "#",
+}) => (
   <div className="bg-white rounded-lg shadow-xl p-6 transform transition-all duration-300 hover:scale-105 border border-gray-200">
     <div className="w-16 h-16 bg-[#FC2D7C] rounded-full flex items-center justify-center mb-4">
       <Icon className="text-white" size={32} />
