@@ -91,12 +91,12 @@ const timelineEvents = [
 
 // Placeholder carousel images
 const carouselImages = [
-  "/placeholder.svg?height=300&width=400",
-  "/placeholder.svg?height=300&width=400",
-  "/placeholder.svg?height=300&width=400",
-  "/placeholder.svg?height=300&width=400",
-  "/placeholder.svg?height=300&width=400",
-  "/placeholder.svg?height=300&width=400",
+  "/images/timesquare/4.jpg",
+  "/images/timesquare/2.png",
+  "/images/timesquare/3.jpg",
+  "/images/timesquare/9.jpg",
+  "/images/timesquare/5.png",
+  "/images/timesquare/6.jpg",
 ];
 
 export function InvestorPage() {

@@ -53,6 +53,7 @@ export function LandingPage() {
               <Link href="#" className="text-sm font-bold hover:text-[#FF69B4] transition-colors">Adler 3D</Link>
               <Link href="#" className="text-sm font-medium hover:text-[#FF69B4] transition-colors">Features</Link>
               <Link href="#" className="text-sm font-medium hover:text-[#FF69B4] transition-colors">How It Works</Link>
+              <Link href="#" className="text-sm font-medium hover:text-[#FF69B4] transition-colors">IR</Link>
               <Link href="#" className="text-sm font-medium hover:text-[#FF69B4] transition-colors">About Us</Link>
             </nav>
             <div className="flex items-center space-x-4">
