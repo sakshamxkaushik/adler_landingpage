@@ -6,6 +6,13 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Users, Heart, Briefcase, GraduationCap, LucideIcon } from 'lucide-react'
 import Link from 'next/link'
 import Culture from '@/assets/images/memoji-computer.png'
+import { Ubuntu } from "next/font/google";
+
+const ubuntu = Ubuntu({
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 interface JobListingProps {
   title: string;
@@ -40,7 +47,7 @@ const BenefitCard: React.FC<BenefitCardProps> = ({ icon: Icon, title, descriptio
 
 export function HrPage() {
   return (
-    <div className="min-h-screen font-sans bg-gray-50 text-gray-800">
+    <div className={`min-h-screen bg-gray-50 text-gray-800 ${ubuntu.className}`}>
       <header className="bg-white shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/">

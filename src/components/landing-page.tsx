@@ -9,6 +9,7 @@ import { Ubuntu } from 'next/font/google'
 import Logo from '@/assets/images/logo.png'
 
 
+
 const ubuntu = Ubuntu({ 
   weight: ['300', '400', '500', '700'],
   subsets: ['latin'],
@@ -57,7 +58,7 @@ export function LandingPage() {
               <Link href="#" className="text-sm font-medium hover:text-[#FF69B4] transition-colors">About Us</Link>
             </nav>
             <div className="flex items-center space-x-4">
-              <Button className="bg-[#FC2D7C] hover:bg-[#1F1F1F] text-white">
+              <Button className="bg-[#FC2D7C] hover:bg-[#1F1F1F] text-white"> 
                 Get In Touch
               </Button>
               <Button variant="outline" className="border-black text-black hover:bg-white hover:text-black">
