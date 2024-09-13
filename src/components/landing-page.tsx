@@ -56,11 +56,11 @@ export function LandingPage() {
               <Link href="#" className="text-sm font-medium hover:text-[#FF69B4] transition-colors">About Us</Link>
             </nav>
             <div className="flex items-center space-x-4">
-              <Button className="bg-[#FF69B4] hover:bg-[#FF1493] text-white">
+              <Button className="bg-[#FC2D7C] hover:bg-[#1F1F1F] text-white">
                 Get In Touch
               </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black">
-                Kr
+              <Button variant="outline" className="border-black text-black hover:bg-white hover:text-black">
+                En
               </Button>
             </div>
           </div>
@@ -81,7 +81,7 @@ export function LandingPage() {
   <div className="relative z-10 text-center">
     <h1 className="text-5xl md:text-7xl font-bold mb-4">Join the 3D Revolution</h1>
     <p className="text-xl md:text-2xl mb-8">Transform Your Ideas into Reality</p>
-    <Button className="bg-[#FF69B4] hover:bg-[#FF1493] text-white text-lg py-6 px-8">
+    <Button className="bg-[#FC2D7C] hover:bg-[#1F1F1F] text-white text-lg py-6 px-8">
       Get Started
     </Button>
   </div>
