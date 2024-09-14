@@ -58,7 +58,7 @@ export function HrPage() {
       </header>
 
       <main>
-        <section className="py-20 bg-gradient-to-r from-[#FC2D7C] to-[#6E28E8] text-white">
+        <section className="py-20 bg-gradient-to-r from-[#FC2D7C] to-[#FC2D7C] text-white">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl font-bold mb-4">Join the Adler Team</h1>
             <p className="text-xl mb-8">Shape the future of 3D digital spaces and be part of something extraordinary</p>
