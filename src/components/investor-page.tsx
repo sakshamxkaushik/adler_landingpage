@@ -18,13 +18,10 @@ const investors = [
   { name: "Lighthouse Ventures", logo: "/images/investor/326e6b47a4c66.png" },
   { name: "Evergreen", logo: "/images/investor/c81f1770f84fb.png" },
   { name: "HYU Holdings", logo: "/images/investor/076597ed48b1d.png" },
-  {
-    name: "VDRC Investment Partners",
-    logo: "/images/investor/8ac300d0e55ee.png",
-  },
+  { name: "VDRC Investment Partners", logo: "/images/investor/8ac300d0e55ee.png" },
   { name: "a.camp", logo: "/images/investor/86823cd3f002c.png" },
   { name: "Ulysses Capital", logo: "/images/investor/2d4856d4a6dac.png" },
-];
+]
 
 const timelineEvents = [
   {
@@ -117,37 +114,29 @@ export function InvestorPage() {
       <main className="container mx-auto px-4 py-16">
         <section className="mb-16">
           <h2 className="text-4xl font-bold mb-8">Investor</h2>
-          <p className="text-xl mb-8">
-            Investors with foresight are on board with Team Adler
-          </p>
+          <p className="text-xl mb-8">Investors with foresight are on board with Team Adler</p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {investors.map((investor, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center  p-4 rounded-lg"
-              >
+              <div key={index} className="flex items-center justify-center p-4 rounded-lg">
                 <Image
                   src={investor.logo}
                   alt={investor.name}
-                  width={150}
-                  height={50}
+                  width={200}
+                  height={100}
+                  className="w-full h-auto object-contain"
                 />
               </div>
             ))}
           </div>
           <div className="mt-8 text-center">
             <p className="mb-4">Adler is on Series A round</p>
-            <Button className="bg-white text-black hover:bg-gray-200">
-              Request IR materials
-            </Button>
+            <Button className="bg-white text-black hover:bg-gray-200">Request IR materials</Button>
           </div>
         </section>
 
         <section className="mb-16">
           <h2 className="text-4xl font-bold mb-8">Timeline</h2>
-          <p className="text-xl mb-8">
-            Team Adler is determined for growth and a better tomorrow
-          </p>
+          <p className="text-xl mb-8">Team Adler is determined for growth and a better tomorrow</p>
           <div className="space-y-8">
             {timelineEvents.map((yearGroup, index) => (
               <div key={index}>
@@ -182,9 +171,9 @@ export function InvestorPage() {
                   <Image
                     src={image}
                     alt={`Featured image ${index + 1}`}
-                    width={400}
-                    height={300}
-                    className="mx-auto"
+                    width={1920}
+                    height={1080}
+                    className="mx-auto object-cover w-full h-[600px]"
                   />
                 </div>
               ))}
@@ -205,5 +194,5 @@ export function InvestorPage() {
         </section>
       </main>
     </div>
-  );
+  )
 }
