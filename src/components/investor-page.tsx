@@ -88,12 +88,14 @@ const timelineEvents = [
 
 // Placeholder carousel images
 const carouselImages = [
-  "/images/timesquare/4.jpg",
+  "/images/timesquare/0.jpg",
+  "/images/timesquare/1.jpg",
   "/images/timesquare/2.png",
   "/images/timesquare/3.jpg",
-  "/images/timesquare/9.jpg",
-  "/images/timesquare/5.png",
+  "/images/timesquare/4.png",
+  "/images/timesquare/5.jpg",
   "/images/timesquare/6.jpg",
+  "/images/timesquare/7.jpg",
 ];
 
 export function InvestorPage() {
@@ -173,7 +175,7 @@ export function InvestorPage() {
                     alt={`Featured image ${index + 1}`}
                     width={1920}
                     height={1080}
-                    className="mx-auto object-cover w-full h-[600px]"
+                    className="mx-auto object-cover w-full h-[550px]"
                   />
                 </div>
               ))}
