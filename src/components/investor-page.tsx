@@ -168,7 +168,7 @@ export function InvestorPage() {
         </section>
 
         <section>
-          <h2 className="text-4xl font-bold mb-8">Featured Images</h2>
+          <h2 className="text-4xl font-bold mb-8">Events</h2>
           <div className="relative">
             <div className="flex overflow-hidden">
               {carouselImages.map((image, index) => (
