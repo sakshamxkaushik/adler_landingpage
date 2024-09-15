@@ -95,11 +95,14 @@ export function LandingPage() {
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
           <iframe
             className="absolute w-full h-full"
-            src="https://www.youtube.com/embed/PXef6QF0KHY?autoplay=1&mute=1&loop=1&playlist=PXef6QF0KHY&controls=0&showinfo=0&modestbranding=1&rel=0"
-            title="YouTube video player"
+            src="https://www.youtube.com/embed/PXef6QF0KHY?autoplay=1&mute=1&loop=1&playlist=PXef6QF0KHY&controls=0&modestbranding=1&rel=0"
+            
+            title="Adler NY 2023"
+            
             frameBorder="0"
             allow="autoplay; fullscreen"
             allowFullScreen
+            
           ></iframe>
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
           <div className="relative z-10 text-center">
