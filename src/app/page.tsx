@@ -1,16 +1,17 @@
 import { Header} from "@/sections/Header"
 import { LandingPage } from "@/components/landing-page";
-import { InvestorPage } from "@/app/ir/page";
-import { FeaturePage} from "@/app/feature/page"
+import { FeaturePage} from "@/components/featurepage"
+import dynamic from 'next/dynamic'
 
+const InvestorPage = dynamic(() => import('./ir/page'), { ssr: false })
 
 export default function Home() {
   return (
-    <div>
+    <main>
       <Header />
       <LandingPage />
       <FeaturePage />
       <InvestorPage />
-    </div>
+    </main>
   );
 }

@@ -98,7 +98,7 @@ const carouselImages = [
   "/images/timesquare/7.jpg",
 ];
 
-export function InvestorPage() {
+export default function InvestorPage() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
 
   const nextSlide = () => {

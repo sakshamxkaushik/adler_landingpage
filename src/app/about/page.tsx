@@ -13,7 +13,7 @@ const ubuntu = Ubuntu({
 export default function About() {
   return (
     <div className={`min-h-screen bg-gradient-to-b from-white to-gray-100 text-gray-800 ${ubuntu.className}`}>
-      <div className="absolute inset-0 bg-[url('/glossy-overlay.png')] bg-cover bg-center opacity-50 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-cover bg-center opacity-50 pointer-events-none"></div>
       <main className="container mx-auto px-4 py-16 relative z-10">
         <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#FC2D7C] to-[#FF69B4]">
           About Adler
@@ -31,7 +31,7 @@ export default function About() {
           <h2 className="text-3xl font-bold mb-4 text-[#FC2D7C]">Our CEO</h2>
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
             <Image
-              src="/ceo-placeholder.jpg"
+              src="/images/profile/ceo.png"
               alt="CEO Name"
               width={300}
               height={300}
