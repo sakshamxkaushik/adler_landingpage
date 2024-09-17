@@ -3,23 +3,19 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Ubuntu } from "next/font/google";
+
 import { Button } from "@/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link as ScrollLink } from 'react-scroll'; // Import ScrollLink
 import Logo from "@/assets/images/logo.png";
 
-const ubuntu = Ubuntu({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-});
 
 const navItems = [
-  { href: "https://adler-dev3.vercel.app/", label: "Adler 3D" },
-  { href: "/feature", label: "Features" },
-  { href: "#", label: "How It Works" },
-  { href: "#", label: "IR" },
-  { href: "/about", label: "About Us" },
+  { href: "landing", label: "Home" },
+  { href: "features", label: "Features" },
+  { href: "how-it-works", label: "How It Works" },
+  { href: "ir", label: "IR" },
+  { href: "about", label: "About Us" },
 ];
 
 export const Header: React.FC = () => {
@@ -55,13 +51,15 @@ export const Header: React.FC = () => {
           </Link>
           <nav className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <Link
+              <ScrollLink
                 key={item.label}
-                href={item.href}
+                to={item.href}
+                smooth={true}
+                duration={500}
                 className="text-sm font-medium text-white hover:text-[#FF69B4] transition-colors"
               >
                 {item.label}
-              </Link>
+              </ScrollLink>
             ))}
           </nav>
           <div className="hidden md:flex items-center space-x-4">
@@ -92,14 +90,16 @@ export const Header: React.FC = () => {
         <div className="md:hidden bg-black bg-opacity-95 backdrop-blur-sm">
           <nav className="flex flex-col space-y-4 p-4">
             {navItems.map((item) => (
-              <Link
+              <ScrollLink
                 key={item.label}
-                href={item.href}
+                to={item.href}
+                smooth={true}
+                duration={500}
                 className="text-lg font-medium text-white hover:text-[#FF69B4] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
-              </Link>
+              </ScrollLink>
             ))}
             <Button className="bg-[#FC2D7C] hover:bg-[#1F1F1F] text-white w-full">
               Get In Touch

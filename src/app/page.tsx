@@ -9,9 +9,15 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <LandingPage />
-      <FeaturePage />
-      <InvestorPage />
+      <section id="landing">
+        <LandingPage />
+      </section>
+      <section id="features">
+        <FeaturePage />
+      </section>
+      <section id="investor">
+        <InvestorPage />
+      </section>
     </main>
   );
 }
