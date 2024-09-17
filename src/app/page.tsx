@@ -1,7 +1,7 @@
 import { Header} from "@/sections/Header"
 import { LandingPage } from "@/components/landing-page";
 import { InvestorPage } from "@/app/ir/page";
-import { FeaturesPage} from "@/app/feature/page"
+import { FeaturePage} from "@/app/feature/page"
 
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
     <div>
       <Header />
       <LandingPage />
-      <FeaturesPage />
+      <FeaturePage />
       <InvestorPage />
     </div>
   );

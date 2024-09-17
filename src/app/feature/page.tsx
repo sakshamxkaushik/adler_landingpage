@@ -61,7 +61,7 @@ const TechFeature: React.FC<TechFeatureProps> = ({
   </motion.div>
 );
 
-export function FeaturesPage() {
+export function FeaturePage() {
   return (
     <div
       className={`min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 text-gray-800 ${ubuntu.className}`}
