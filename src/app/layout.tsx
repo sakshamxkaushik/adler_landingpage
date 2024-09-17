@@ -1,21 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Calistoga } from "next/font/google";
+import { Inter, Calistoga, Ubuntu } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
-
-
-import { Roboto } from 'next/font/google'
- 
-const roboto = Roboto({
-  weight: '400',
-  subsets: ['latin'],
-})
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const calistoga = Calistoga({
   subsets: ["latin"],
   variable: "--font-serif",
   weight: "400",
+});
+const ubuntu = Ubuntu({
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--font-ubuntu",
 });
 
 export const metadata: Metadata = {
@@ -32,9 +29,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={twMerge(
-          inter.className,
-          calistoga.className,
-          "bg-gray-900 text-white anri4aliased font-sans"
+          inter.variable,
+          calistoga.variable,
+          ubuntu.variable,
+          ubuntu.className,
+          "bg-gray-900 text-white antialiased font-ubuntu"
         )}
       >
         {children}

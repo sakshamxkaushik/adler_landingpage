@@ -1,23 +1,16 @@
+import { Header} from "@/sections/Header"
 import { LandingPage } from "@/components/landing-page";
-import { HrPage } from "@/components/hr-page";
-import { InvestorPage } from "@/components/investor-page";
-import { FeaturesPage} from "@/components/features-page";
-import { EarlyAccessWaitlist} from "@/components/components-early-access-waitlist";
-// import { Header } from "@/sections/Header";
-// import { IR_page } from "@/sections/IR_page";
-// import { HeroSection } from "@/sections/Hero";
+import { InvestorPage } from "@/app/ir/page";
+import { FeaturesPage} from "@/app/feature/page"
+
 
 export default function Home() {
   return (
     <div>
-  
+      <Header />
       <LandingPage />
       <FeaturesPage />
       <InvestorPage />
-      <HrPage />
-      <EarlyAccessWaitlist />
-      {/* <HeroSection /> */}
-      {/* <IR_page /> */}
     </div>
   );
 }

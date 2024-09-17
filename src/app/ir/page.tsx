@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Ubuntu } from "next/font/google";
 
@@ -94,7 +94,7 @@ const carouselImages = [
   "/images/timesquare/3.jpg",
   "/images/timesquare/4.png",
   "/images/timesquare/5.jpg",
-  "/images/timesquare/6.jpg",
+  "/images/timesquare/6.png",
   "/images/timesquare/7.jpg",
 ];
 

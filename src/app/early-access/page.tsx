@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { BackgroundBeams } from "./ui/background-beams";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
+import { BackgroundBeams } from "../../ui/background-beams";
+import { Button } from "../../ui/button";
+import { Input } from "../../ui/input";
 import { motion } from "framer-motion";
 import { Ubuntu } from 'next/font/google'
 
@@ -14,7 +14,7 @@ const ubuntu = Ubuntu({
 })
 
 
-export function EarlyAccessWaitlist() {
+export default function EarlyAccessWaitlist() {
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 

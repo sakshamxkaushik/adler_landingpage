@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Image from 'next/image'
-import { Button } from "@/components/ui/button"
+import { Button } from "@/ui/button"
 import { ArrowRight, Users, Heart, Briefcase, GraduationCap, LucideIcon } from 'lucide-react'
 import Link from 'next/link'
 import Culture from '@/assets/images/memoji-computer.png'
@@ -45,7 +45,7 @@ const BenefitCard: React.FC<BenefitCardProps> = ({ icon: Icon, title, descriptio
   </div>
 )
 
-export function HrPage() {
+export default function HrPage() {
   return (
     <div className={`min-h-screen bg-gray-50 text-gray-800 ${ubuntu.className}`}>
       <header className="bg-white shadow-sm">
