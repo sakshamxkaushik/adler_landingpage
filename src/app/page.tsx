@@ -1,5 +1,5 @@
 import { Header} from "@/sections/Header"
-import { LandingPage } from "@/components/landing-page";
+import LandingPageWrapper from '@/components/landing-page-wrapper'
 import { FeaturePage} from "@/components/featurepage"
 import dynamic from 'next/dynamic'
 
@@ -10,7 +10,7 @@ export default function Home() {
     <main>
       <Header />
       <section id="landing">
-        <LandingPage />
+       <LandingPageWrapper />
       </section>
       <section id="features">
         <FeaturePage />
