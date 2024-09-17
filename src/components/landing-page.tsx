@@ -1,27 +1,89 @@
 "use client"
 
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useEffect, useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/ui/button"
-import { ChevronDown } from "lucide-react"
-import { Ubuntu } from "next/font/google"
+import { ChevronDown, Play } from "lucide-react"
 
-const ubuntu = Ubuntu({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-})
 
 export default function LandingPage() {
   const videoRef = useRef<HTMLVideoElement>(null)
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [cursorVariant, setCursorVariant] = useState("default")
 
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.play()
     }
+
+    const mouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY })
+    }
+
+    window.addEventListener("mousemove", mouseMove)
+
+    return () => {
+      window.removeEventListener("mousemove", mouseMove)
+    }
   }, [])
 
+  const variants = {
+    default: {
+      opacity: 0,
+      scale: 0.8,
+    },
+    hover: {
+      opacity: 1,
+      scale: 1,
+    },
+  }
+
+  const handlePlayVideo = () => {
+    if (videoRef.current) {
+      if (videoRef.current.paused) {
+        videoRef.current.play()
+      } else {
+        videoRef.current.pause()
+      }
+    }
+  }
+
   return (
-    <div className={`min-h-screen text-white ${ubuntu.className}`}>
+    <div 
+      className={`min-h-screen text-white cursor-none`}
+      onMouseEnter={() => setCursorVariant("hover")}
+      onMouseLeave={() => setCursorVariant("default")}
+      onClick={handlePlayVideo}
+    >
+      <AnimatePresence>
+        <motion.div
+          className="fixed top-0 left-0 z-50 pointer-events-none"
+          animate={{
+            x: mousePosition.x - 40,
+            y: mousePosition.y - 40,
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 500,
+            damping: 28,
+            mass: 0.5,
+          }}
+        >
+          <motion.div
+            variants={variants}
+            animate={cursorVariant}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 20,
+            }}
+            className="bg-[#FC2D7C] text-white rounded-full p-2 flex items-center justify-center w-20 h-20"
+          >
+            <Play size={16} className="mr-1" />
+            <span className="text-xs">Play</span>
+          </motion.div>
+        </motion.div>
+      </AnimatePresence>
       <main className="relative w-full h-screen overflow-hidden">
         <div className="absolute inset-0">
           <video
