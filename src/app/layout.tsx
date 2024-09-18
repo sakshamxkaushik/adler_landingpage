@@ -33,7 +33,7 @@ export default function RootLayout({
           calistoga.variable,
           ubuntu.variable,
           ubuntu.className,
-          "bg-gray-900 text-white antialiased font-ubuntu"
+          "bg-black text-white antialiased font-ubuntu"
         )}
       >
         {children}
