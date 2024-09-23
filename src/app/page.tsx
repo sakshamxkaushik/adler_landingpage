@@ -16,10 +16,6 @@ export default function Home() {
       <section id="features">
         <FeaturePage />
       </section>
-      <section id="investor">
-        <InvestorPage />
-      </section>
-      <DynamicFooter />
     </main>
   );
 }

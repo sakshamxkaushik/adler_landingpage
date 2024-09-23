@@ -57,7 +57,7 @@ export default function FeaturePage() {
       className={`min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 text-gray-800 `}
     >
       <main className="container mx-auto px-4 py-16">
-        <motion.section
+        <motion.section 
           id="features"
           className="mb-20"
           initial={{ opacity: 0 }}
