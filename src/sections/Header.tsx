@@ -3,19 +3,16 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-
-import { Button } from "@/ui/button";
-import { Menu, X } from "lucide-react";
-import { Link as ScrollLink } from 'react-scroll'; // Import ScrollLink
+import { Button } from "@/components/ui/button";
+import { Menu, X, Sun, Globe } from "lucide-react";
+import { Link as ScrollLink } from 'react-scroll';
 import Logo from "@/assets/images/logo.png";
 
-
 const navItems = [
-  { href: "landing", label: "Home" },
   { href: "features", label: "Features" },
   { href: "how-it-works", label: "How It Works" },
-  { href: "ir", label: "IR" },
-  { href: "about", label: "About Us" },
+  { href: "ir", label: "Investors" },
+  { href: "careers", label: "Careers" },
 ];
 
 export const Header: React.FC = () => {
@@ -49,40 +46,23 @@ export const Header: React.FC = () => {
           <Link href="/" className="flex items-center space-x-2">
             <Image src={Logo} alt="Adler Logo" width={120} height={40} />
           </Link>
-          <nav className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <ScrollLink
-                key={item.label}
-                to={item.href}
-                smooth={true}
-                duration={500}
-                className="text-sm font-medium text-white hover:text-[#FF69B4] transition-colors"
-              >
-                {item.label}
-              </ScrollLink>
-            ))}
-          </nav>
-          <div className="hidden md:flex items-center space-x-4">
-            <Button className="bg-[#FC2D7C] hover:bg-[#1F1F1F] text-white">
-              Get In Touch
-            </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-black"
-            >
-              En
-            </Button>
-          </div>
-          <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-white"
+        
+
+          <div className="flex items-center space-x-4">
+            <button className="text-white hover:text-[#FF69B4]" aria-label="Toggle dark mode">
+              <Sun size={20} />
+            </button>
+            <button className="text-white hover:text-[#FF69B4] flex items-center space-x-1" aria-label="Change language">
+              <Globe size={20} />
+              <span className="text-sm">English</span>
+            </button>
+            <button
+              className="md:hidden text-white"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              <span className="sr-only">Toggle menu</span>
-            </Button>
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
       </div>
@@ -101,15 +81,6 @@ export const Header: React.FC = () => {
                 {item.label}
               </ScrollLink>
             ))}
-            <Button className="bg-[#FC2D7C] hover:bg-[#1F1F1F] text-white w-full">
-              Get In Touch
-            </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-black w-full"
-            >
-              En
-            </Button>
           </nav>
         </div>
       )}

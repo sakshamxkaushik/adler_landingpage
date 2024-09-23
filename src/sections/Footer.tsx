@@ -31,8 +31,8 @@ export const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">Follow us</h3>
             <ul className="space-y-2">
-              <li><a href="https://www.linkedin.com/company/adler" target="_blank" rel="noopener noreferrer" className="hover:text-[#FC2D7C] transition-colors flex items-center"><FaLinkedin className="mr-2" /> LinkedIn</a></li>
-              <li><a href="https://www.instagram.com/adler" target="_blank" rel="noopener noreferrer" className="hover:text-[#FC2D7C] transition-colors flex items-center"><FaInstagram className="mr-2" /> Instagram</a></li>
+              <li><a href="https://www.linkedin.com/company/adler-universe" target="_blank" rel="noopener noreferrer" className="hover:text-[#FC2D7C] transition-colors flex items-center"><FaLinkedin className="mr-2" /> LinkedIn</a></li>
+              <li><a href="https://www.instagram.com/adler.universe/" target="_blank" rel="noopener noreferrer" className="hover:text-[#FC2D7C] transition-colors flex items-center"><FaInstagram className="mr-2" /> Instagram</a></li>
             </ul>
           </div>
         </div>

@@ -1,9 +1,9 @@
-import { Header} from "@/sections/Header"
-import LandingPageWrapper from '@/components/landing-page-wrapper'
-import { FeaturePage} from "@/components/featurepage"
-import { Footer} from "@/sections/Footer"
+import { Header } from "@/sections/Header"
+import LandingPageWrapper from '@/components/landing-page'
+import FeaturePage from '@/components/featurepage'
 import dynamic from 'next/dynamic'
 
+const DynamicFooter = dynamic(() => import('@/sections/Footer').then(mod => mod.Footer), { ssr: false })
 const InvestorPage = dynamic(() => import('./ir/page'), { ssr: false })
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
     <main>
       <Header />
       <section id="landing">
-       <LandingPageWrapper />
+        <LandingPageWrapper />
       </section>
       <section id="features">
         <FeaturePage />
@@ -19,8 +19,7 @@ export default function Home() {
       <section id="investor">
         <InvestorPage />
       </section>
-        <Footer />
-
+      <DynamicFooter />
     </main>
   );
 }

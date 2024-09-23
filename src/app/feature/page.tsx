@@ -2,17 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Button } from "@/ui/button";
-import { Ubuntu } from "next/font/google";
-import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import Link from "next/link";
-
-const ubuntu = Ubuntu({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-});
 
 interface FeatureProps {
   icon: React.ReactNode;
@@ -64,7 +54,7 @@ const TechFeature: React.FC<TechFeatureProps> = ({
 export default function FeaturePage() {
   return (
     <div
-      className={`min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 text-gray-800 ${ubuntu.className}`}
+      className={`min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 text-gray-800 `}
     >
       <main className="container mx-auto px-4 py-16">
         <motion.section
@@ -105,7 +95,6 @@ export default function FeaturePage() {
               title="Familiar yet new"
               description="From text and voice chat to Multiplay mode - we make familiar features easy and innovate brand new social features."
             />
-
             <Feature
               icon={
                 <Image
@@ -120,17 +109,6 @@ export default function FeaturePage() {
               description="Access advanced edit features and your insights dashboard. Search for 3D items in OBJECT LIBRARY."
             />
           </div>
-          <motion.div
-            className="text-center"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Link href="/early-access">
-              <Button className="bg-[#FC2D7C] hover:bg-[#1F1F1F] text-white text-lg py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-                Get Early Access to Adler Studio <ArrowRight className="ml-2" />
-              </Button>
-            </Link>
-          </motion.div>
         </motion.section>
 
         <motion.section
