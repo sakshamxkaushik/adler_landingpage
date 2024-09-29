@@ -1,8 +1,9 @@
 'use client'
 
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { motion, useAnimation, useInView, useDragControls } from 'framer-motion'
+import { Pause, Play } from 'lucide-react'
 
 interface AutoScrollCarouselProps {
   images: string[]
@@ -14,9 +15,10 @@ function AutoScrollCarousel({ images, direction }: AutoScrollCarouselProps) {
   const dragControls = useDragControls()
   const ref = useRef(null)
   const inView = useInView(ref)
+  const [isPaused, setIsPaused] = useState(false)
 
   useEffect(() => {
-    if (inView) {
+    if (inView && !isPaused) {
       controls.start({
         x: direction === 'left' 
           ? [0, -400 * images.length] 
@@ -33,10 +35,14 @@ function AutoScrollCarousel({ images, direction }: AutoScrollCarouselProps) {
     } else {
       controls.stop()
     }
-  }, [controls, images.length, inView, direction])
+  }, [controls, images.length, inView, direction, isPaused])
+
+  const handleImageClick = () => {
+    setIsPaused(!isPaused)
+  }
 
   return (
-    <div ref={ref} className="overflow-hidden h-[225px]">
+    <div ref={ref} className="overflow-hidden h-[225px] relative group">
       <motion.div
         className="flex cursor-grab active:cursor-grabbing"
         animate={controls}
@@ -46,7 +52,11 @@ function AutoScrollCarousel({ images, direction }: AutoScrollCarouselProps) {
         style={{ width: `${images.length * 400 * 2}px` }}
       >
         {[...images, ...images].map((src, idx) => (
-          <div key={idx} className="w-[400px] h-[225px] flex-shrink-0 p-2">
+          <div 
+            key={idx} 
+            className="w-[400px] h-[225px] flex-shrink-0 p-2"
+            onClick={handleImageClick}
+          >
             <div className="w-full h-full relative rounded-lg overflow-hidden shadow-md">
               <Image
                 src={src}
@@ -58,6 +68,13 @@ function AutoScrollCarousel({ images, direction }: AutoScrollCarouselProps) {
           </div>
         ))}
       </motion.div>
+      <div className="absolute top-2 right-2 bg-black bg-opacity-50 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+        {isPaused ? (
+          <Play className="w-6 h-6 text-white" />
+        ) : (
+          <Pause className="w-6 h-6 text-white" />
+        )}
+      </div>
     </div>
   )
 }
