@@ -52,10 +52,6 @@ export const Header: React.FC = () => {
             <button className="text-white hover:text-[#FF69B4]" aria-label="Toggle dark mode">
               <Sun size={20} />
             </button>
-            <button className="text-white hover:text-[#FF69B4] flex items-center space-x-1" aria-label="Change language">
-              <Globe size={20} />
-              <span className="text-sm">English</span>
-            </button>
             <button
               className="md:hidden text-white"
               onClick={() => setIsMenuOpen(!isMenuOpen)}

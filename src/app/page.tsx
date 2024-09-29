@@ -1,10 +1,8 @@
+import React from 'react'
 import { Header } from "@/sections/Header"
 import LandingPageWrapper from '@/components/landing-page'
 import FeaturePage from '@/components/featurepage'
-import dynamic from 'next/dynamic'
-
-const DynamicFooter = dynamic(() => import('@/sections/Footer').then(mod => mod.Footer), { ssr: false })
-const InvestorPage = dynamic(() => import('./ir/page'), { ssr: false })
+import Footer from "@/sections/Footer"
 
 export default function Home() {
   return (
@@ -16,6 +14,7 @@ export default function Home() {
       <section id="features">
         <FeaturePage />
       </section>
+      <Footer />
     </main>
-  );
+  )
 }
