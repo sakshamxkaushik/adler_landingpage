@@ -315,13 +315,7 @@ export default function LandingPage() {
           imageAlt="XRML code example"
         />
 
-        <div className="m-0">
-          <EnhancedImageCarousel
-            topImages={topCarouselImages}
-            bottomImages={bottomCarouselImages}
-          />
-        </div>
-
+        
         <div className="mb-20">
           <h2 className="text-4xl font-bold mb-8 text-center">
             Adler's <span className="text-[#FC2D7C]">Timeline</span>
