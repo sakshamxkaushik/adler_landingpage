@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Button } from "@/components/ui/button";
 import { Menu, X, Sun, Globe } from "lucide-react";
 import { Link as ScrollLink } from 'react-scroll';
 import Logo from "@/assets/images/logo.png";

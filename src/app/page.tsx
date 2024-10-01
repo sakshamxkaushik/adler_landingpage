@@ -7,15 +7,17 @@ import Footer from "@/sections/Footer"
 
 export default function Home() {
   return (
-    <main>
+    <main className="flex flex-col min-h-screen">
       <Header />
-      <section id="landing">
+      <section id="landing" className="flex-grow">
         <LandingPageWrapper />
       </section>
       <section id="features">
         <FeaturePage />
       </section>
-      <Gallery />
+      <section id="gallery">
+        <Gallery />
+      </section>
       <Footer />
     </main>
   )
