@@ -285,14 +285,7 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-8 text-center mb-20">
-          <p className="text-xl mb-4">
-            "The meaning of life is to be understood as helping, to be useful,
-            to play a part in making others happy."
-          </p>
-          <p className="text-lg font-semibold">Alfred Adler</p>
-        </div>
-
+        
         <FeatureSection
           title="Infinite Dimensions Your Gateway to the 3D Web"
           description="Step into Virtual Reality where the boundaries of reality and imagination merge. Our platform makes creating, exploring, and interacting with 3D web environments as simple as browsing the 2D web. 
