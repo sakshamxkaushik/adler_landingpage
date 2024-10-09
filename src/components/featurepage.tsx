@@ -15,14 +15,14 @@ const Feature: React.FC<FeatureProps> = ({ image, title, description }) => (
   <motion.div
     className="bg-white rounded-lg shadow-lg overflow-hidden"
     initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
+    animate={{ opacity: 1, y: 1 }}
     transition={{ duration: 0.5 }}
   >
     <Image
       src={image}
       alt={title}
-      width={400}
-      height={400}
+      width={1920} // Full 1080p width
+      height={1080} // Full 1080p height
       className="w-full h-auto"
     />
     <div className="p-4">
@@ -56,7 +56,7 @@ const FeatureSection: React.FC<{
       )}
     </h2>
     <p className="text-lg mb-8 max-w-2xl">{description}</p>
-    <div className="rounded-lg overflow-hidden shadow-lg">
+    <div className="rounded-lg overflow-hidden">
       <Image
         src={imageSrc}
         alt={imageAlt}
@@ -140,92 +140,6 @@ const EnhancedImageCarousel: React.FC<EnhancedImageCarouselProps> = ({
   );
 };
 
-interface TimelineEventProps {
-  date: string;
-  description: string;
-  isLeft: boolean;
-}
-
-const TimelineEvent: React.FC<TimelineEventProps> = ({
-  date,
-  description,
-  isLeft,
-}) => (
-  <div className={`flex items-center ${isLeft ? "flex-row-reverse" : ""} mb-8`}>
-    <div className={`w-5/12 ${isLeft ? "text-right" : ""}`}>
-      <div className="bg-white rounded-lg shadow-md p-4 inline-block">
-        <p className="font-bold text-[#FC2D7C]">{date}</p>
-        <p>{description}</p>
-      </div>
-    </div>
-    <div className="w-2/12 flex justify-center">
-      <div className="w-4 h-4 bg-[#FC2D7C] rounded-full"></div>
-    </div>
-    <div className="w-5/12"></div>
-  </div>
-);
-
-const Timeline = () => (
-  <div className="relative">
-    <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#FC2D7C]"></div>
-    <TimelineEvent
-      date="Aug 2021"
-      description="Adler Inc. is established"
-      isLeft={true}
-    />
-    <TimelineEvent
-      date="Sept 2021"
-      description="Raises 390 mil. KRW from angel investor"
-      isLeft={false}
-    />
-    <TimelineEvent
-      date="Feb 2022"
-      description="Launches Alpha version, raises 500 mil. KRW in seed funding"
-      isLeft={true}
-    />
-    <TimelineEvent
-      date="Apr 2022"
-      description="Alpha ver. reaches MAU of 25,000, Develops proprietary Three.js-based engine"
-      isLeft={false}
-    />
-    <TimelineEvent
-      date="May 2022"
-      description="Alpha ver. supports VR devices, Reaches 1,000 influencer users on Alpha ver."
-      isLeft={true}
-    />
-    <TimelineEvent
-      date="July 2022"
-      description="Signs MOU with blockchain companies 'BLOCKO XYZ' and 'Knust Universe'"
-      isLeft={false}
-    />
-    <TimelineEvent
-      date="Aug 2022"
-      description="Launches Beta version"
-      isLeft={true}
-    />
-    <TimelineEvent
-      date="Sept 2022"
-      description="Participated as the main technical partner at '2022 Focus Paris', Carousel du Louvre. Raises cumulative investment of 2.7 bil. KRW"
-      isLeft={false}
-    />
-    <TimelineEvent
-      date="Apr 2023"
-      description="v.2.0.0 to be launched"
-      isLeft={true}
-    />
-    <TimelineEvent
-      date="May 2023"
-      description="Participated as the main technical partner at '2023 Focus New York', Chelsea Industrial, Manhattan. First-ever 3D real-time Ad in New York's Times Square"
-      isLeft={false}
-    />
-    <TimelineEvent
-      date="June 2023"
-      description="Participate in Artist Junhong Min's exhibition at Korean Culture Center, Paris"
-      isLeft={true}
-    />
-  </div>
-);
-
 export default function LandingPage() {
   const topCarouselImages = [
     "/images/timesquare/0.jpg",
@@ -285,7 +199,6 @@ export default function LandingPage() {
           </div>
         </div>
 
-        
         <FeatureSection
           title="Infinite Dimensions Your Gateway to the 3D Web"
           description="Step into Virtual Reality where the boundaries of reality and imagination merge. Our platform makes creating, exploring, and interacting with 3D web environments as simple as browsing the 2D web. 
@@ -301,19 +214,8 @@ export default function LandingPage() {
           imageAlt="XRML code example"
         />
 
-        <FeatureSection
-          title="Design Your Reality with Adler"
-          description="At Adler, we empower you to design your own reality. Imagine a world where your dreams can take shape, where you can build, create, and experience life on your terms. With our custom-made models, crafting your ideal environment has never been easier."
-          imageSrc="/images/features/last/image.png"
-          imageAlt="XRML code example"
-        />
-
-        
         <div className="mb-20">
-          <h2 className="text-4xl font-bold mb-8 text-center">
-            Adler's <span className="text-[#FC2D7C]">Timeline</span>
-          </h2>
-          <Timeline />
+          <h2 className="text-4xl font-bold mb-8 text-center"></h2>
         </div>
       </div>
     </div>

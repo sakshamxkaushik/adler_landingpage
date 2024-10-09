@@ -6,7 +6,7 @@ import { UseCasesCarousel } from '@/components/UseCasesCarousel'
 import { Gallery } from '@/components/app-gallery-page'
 import Footer from "@/sections/Footer"
 import { Lnews } from '@/components/l_news'
-// import {Timeline} from '@/components/Timeline'
+import Timeline from '@/components/Timeline'
 
 export default function Home() {
   return (
@@ -21,14 +21,14 @@ export default function Home() {
       <section id="use-cases" className="overflow-hidden">
         <UseCasesCarousel />
       </section>
+      <section id="gallery">
+        <Gallery />
+      </section>
       <section id="news" className="bg-gray-50 dark:bg-gray-900">
         <Lnews />
       </section>
-      {/* <section id="timeline" className="bg-white">
+      <section id="timeline">
         <Timeline />
-      </section> */}
-      <section id="gallery">
-        <Gallery />
       </section>
       <Footer />
     </main>

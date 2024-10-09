@@ -25,6 +25,7 @@ const config: Config = {
   	extend: {
   		fontFamily: {
   			sans: 'var(--font-sans)',
+			pretendard: ['Pretendard', 'sans-serif'],
   			serif: 'var(--font-serif)'
   		},
   		borderRadius: {

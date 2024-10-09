@@ -2,58 +2,72 @@
 
 import React, { useRef, useEffect } from "react"
 import { motion, useAnimation, useMotionValue } from "framer-motion"
-import { Gamepad2, Home, GraduationCap, Image as ImageIcon, Store, Tv, Flower2, HeartHandshake, Stethoscope, LucideIcon } from "lucide-react"
+import Entertainment from '../assets/svgd/Entertainment';
+import Education from '../assets/svgd/Education';
+import Exhibition from '../assets/svgd/Exhibition';
+import Funeral from '../assets/svgd/Funeral';
+import Gaming from '../assets/svgd/Gaming';
+import Healthcare from '../assets/svgd/Healthcare';
+import Real_estate from '../assets/svgd/Real_estate';
+import Showrooms from '../assets/svgd/Showrooms';
+import Wedding from '../assets/svgd/Wedding';
 
 interface UseCase {
   title: string;
-  icon: LucideIcon;
+  icon: React.FC;
   description: string;
 }
 
 const useCases: UseCase[] = [
   {
     title: "Gaming",
-    icon: Gamepad2,
+    icon: Gaming,
     description: "Create immersive virtual environments where users can explore and interact, enhancing gaming or social experiences within Adler's 3D spaces.",
   },
   {
     title: "Real Estate",
-    icon: Home,
+    icon: Real_estate,
+
     description: "By using Adler 3D spaces, real estate agents can offer virtual tours of homes and offices, allowing potential buyers or renters to explore properties remotely.",
   },
   {
     title: "Education",
-    icon: GraduationCap,
+    icon: Education,
+
     description: "Adler helps educators build virtual classrooms and practical training spaces, where students and professionals can engage lessons, collaborate, and practice real-world skills.",
   },
   {
     title: "Exhibition",
-    icon: ImageIcon,
+    icon: Exhibition,
+
     description: "Using Adler, organizers can design virtual exhibitions where visitors can explore artworks, artifacts, or displays from anywhere in the world.",
   },
   {
     title: "Show Rooms",
-    icon: Store,
+    icon: Showrooms,
+
     description: "With Adler, develop virtual showrooms where businesses can display products in an interactive 3D setting, allowing customers to view and engage with items.",
   },
   {
     title: "Entertainment",
-    icon: Tv,
+    icon: Entertainment,
     description: "Adler can be used to develop virtual concerts, Karaoke, or performance spaces, offering audiences unique, immersive experiences from anywhere in the world.",
   },
   {
     title: "Funeral",
-    icon: Flower2,
+    icon: Funeral,
+
     description: "Using Adler create virtual environments where family and friends can gather for memorial services, allowing those who cannot attend in person to participate.",
   },
   {
     title: "Wedding",
-    icon: HeartHandshake,
+    icon: Wedding,
+
     description: "With Adler, you can host virtual weddings that allow family and friends to join from anywhere. Everyone can share in the special moments.",
   },
   {
     title: "Health Care",
-    icon: Stethoscope,
+    icon: Healthcare,
     description: "By using Adler, you can create 3D environments that improve medical training, patient education, and rehabilitation. Our technology helps to provide better care for patients.",
   },
 ]
@@ -68,7 +82,7 @@ const UseCaseCard: React.FC<{ useCase: UseCase; index: number }> = ({ useCase, i
       transition={{ delay: index * 0.1 }}
     >
       <div className="mb-8">
-        <Icon className="w-20 h-20 text-pink-500" />
+        <Icon />
       </div>
       <h3 className="text-4xl font-semibold text-pink-500 mb-4 font-['Pretendard']">{useCase.title}</h3>
       <p className="text-lg text-gray-800 font-['Pretendard']">{useCase.description}</p>
@@ -83,25 +97,28 @@ export function UseCasesCarousel() {
   const x = useMotionValue(0)
 
   const handleDragStart = () => setIsDragging(true)
-  const handleDragEnd = () => setIsDragging(false)
+  const handleDragEnd = () => {
+    setIsDragging(false)
+    resumeAutoScroll() // Resume auto-scroll after dragging ends
+  }
 
   const duplicatedUseCases = [...useCases, ...useCases]
 
   useEffect(() => {
-    const autoScroll = async () => {
-      await controls.start({
-        x: [-437 * useCases.length, 0],
-        transition: {
-          duration: 60,
-          ease: "linear",
-          repeat: Infinity,
-          repeatType: "loop",
-        },
-      })
-    }
+    resumeAutoScroll() // Start auto-scroll when the component mounts
+  }, [])
 
-    autoScroll()
-  }, [controls])
+  const resumeAutoScroll = () => {
+    controls.start({
+      x: [-437 * useCases.length, 0],
+      transition: {
+        duration: 60,
+        ease: "linear",
+        repeat: Infinity,
+        repeatType: "loop",
+      },
+    })
+  }
 
   return (
     <div className="w-full py-20 bg-white overflow-hidden">
@@ -120,7 +137,7 @@ export function UseCasesCarousel() {
             dragConstraints={carouselRef}
             onDragStart={handleDragStart}
             onDragEnd={handleDragEnd}
-            animate={controls}
+            animate={controls} // Keep animation running
           >
             {duplicatedUseCases.map((useCase, index) => (
               <UseCaseCard key={`${useCase.title}-${index}`} useCase={useCase} index={index} />

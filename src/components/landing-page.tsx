@@ -3,13 +3,8 @@
 import React, { useRef, useEffect } from "react"
 import { Button } from "@/ui/button"
 import { ChevronDown } from "lucide-react"
-import { Ubuntu } from "next/font/google"
 
-const ubuntu = Ubuntu({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-})
+
 
 export default function LandingPage() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -21,7 +16,7 @@ export default function LandingPage() {
   }, [])
 
   return (
-    <div className={`min-h-screen text-white ${ubuntu.className}`}>
+    <div className={`min-h-screen text-white `}>
       <main className="relative w-full h-screen overflow-hidden">
         <div className="absolute inset-0">
           <video

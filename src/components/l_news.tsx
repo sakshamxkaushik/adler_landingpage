@@ -66,7 +66,7 @@ const items = [
     header: (
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
         <Image 
-          src="/placeholder.svg?height=400&width=800&text=iPhone 15" 
+          src="/" 
           alt="iPhone 15 with USB-C Port" 
           width={800} 
           height={400} 
@@ -82,7 +82,7 @@ const items = [
     header: (
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
         <Image 
-          src="/placeholder.svg?height=200&width=400&text=Inflation Chart" 
+          src="/" 
           alt="Global Inflation Rates" 
           width={400} 
           height={200} 
@@ -98,7 +98,7 @@ const items = [
     header: (
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
         <Image 
-          src="/placeholder.svg?height=200&width=400&text=Tech Layoffs" 
+          src="/" 
           alt="Tech Industry Layoffs" 
           width={400} 
           height={200} 
@@ -114,7 +114,7 @@ const items = [
     header: (
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
         <Image 
-          src="/placeholder.svg?height=200&width=400&text=Crypto Market" 
+          src="/" 
           alt="Cryptocurrency Market Update" 
           width={400} 
           height={200} 
@@ -130,7 +130,7 @@ const items = [
     header: (
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
         <Image 
-          src="/placeholder.svg?height=200&width=400&text=AI Web Dev" 
+          src="/" 
           alt="AI in Web Development" 
           width={400} 
           height={200} 
@@ -146,7 +146,7 @@ const items = [
     header: (
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
         <Image 
-          src="/placeholder.svg?height=200&width=400&text=Breaking News" 
+          src="/" 
           alt="Breaking News" 
           width={400} 
           height={200} 

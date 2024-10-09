@@ -15,9 +15,9 @@ export default function Footer() {
           <div>
             <nav className="mb-4">
               <ul className="flex space-x-6 text-lg">
-                <li><a href="#" className="hover:text-gray-900">Career</a></li>
-                <li><a href="#" className="hover:text-gray-900">IR</a></li>
-                <li><a href="#" className="hover:text-gray-900">Contact</a></li>
+                <li><a href="/hrpage" className="hover:text-gray-900">Career</a></li>
+                <li><a href="/ir" className="hover:text-gray-900">IR</a></li>
+                <li><a href="/contact" className="hover:text-gray-900">Contact</a></li>
               </ul>
             </nav>
             <address className="not-italic mb-2 text-sm">
