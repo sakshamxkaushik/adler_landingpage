@@ -60,11 +60,11 @@ export default function Footer() {
           </div>
           <p className="text-sm w-1/3 text-center">© 2024 Adler. All rights reserved</p>
           <div className="w-1/3 flex justify-end space-x-4">
-            <a href="#" className="text-gray-400 hover:text-gray-500">
+            <a href="https://www.linkedin.com/company/adler-universe/" className="text-gray-400 hover:text-gray-500">
               <span className="sr-only">LinkedIn</span>
               <Linkedin className="h-6 w-6" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-gray-500">
+            <a href="https://www.instagram.com/adler.universe/" className="text-gray-400 hover:text-gray-500">
               <span className="sr-only">Instagram</span>
               <Instagram className="h-6 w-6" />
             </a>

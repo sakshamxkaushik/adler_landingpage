@@ -74,8 +74,7 @@ const timelineEvents = [
 export default function InvestorPage() {
   return (
     <div className="min-h-screen bg-white text-black">
-              <Header /> {/* Add the Header component here */}
-
+      <Header /> {/* Add the Header component here */}
       <main className="container mx-auto px-4 py-16">
         <section className="mb-14">
           <h1 className="text-4xl font-bold mb-2 text-center text-[#FC2D7C]">
@@ -104,15 +103,15 @@ export default function InvestorPage() {
               Thank you for visiting. This page provides you with an email
               address where you can request regarding investor relations. If you
               have any questions about Adler Inc. please contact us at{" "}
-              <span className="text-[#FC2D7C] font-bold">
-                strategy@adler.ex
-              </span>
+              <a href="mailto:ir@adler.cx" className="text-[#FC2D7C] font-bold">
+      ir@adler.cx
+    </a>
               .
             </p>
             <p className="text-sm text-gray-500">
               Please note that the above email is only for inquiries related to
               IR materials. For all other inquiries about Adler services, please
-              contact CS@adler.ex.
+              contact help@adler.cx
             </p>
           </div>
         </section>
@@ -140,7 +139,6 @@ export default function InvestorPage() {
         </section>
       </main>
       <Footer /> {/* Add the Footer component here */}
-
       <style jsx global>{`
         @keyframes scroll {
           0% {
