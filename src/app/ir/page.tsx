@@ -7,10 +7,7 @@ import Footer from "@/sections/Footer";
 import { Button } from "@/components/ui/button";
 
 const investors = [
-  {
-    name: "Korea Investment Partners Co., Ltd.",
-    logo: "/images/investor/korea.png",
-  },
+  {name: "Korea Investment Partners Co., Ltd.",logo: "/images/investor/korea.png",},
   { name: "Lighthouse Ventures", logo: "/images/investor/lighthouse.png" },
   { name: "Evergreen", logo: "/images/investor/evergreen.png" },
   { name: "HYU Holdings", logo: "/images/investor/hyuholdings.png" },
@@ -104,8 +101,8 @@ export default function InvestorPage() {
               address where you can request regarding investor relations. If you
               have any questions about Adler Inc. please contact us at{" "}
               <a href="mailto:ir@adler.cx" className="text-[#FC2D7C] font-bold">
-      ir@adler.cx
-    </a>
+                ir@adler.cx
+              </a>
               .
             </p>
             <p className="text-sm text-gray-500">

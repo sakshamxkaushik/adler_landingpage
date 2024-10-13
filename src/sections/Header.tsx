@@ -47,18 +47,7 @@ export const Header: React.FC = () => {
           </Link>
         
 
-          <div className="flex items-center space-x-4">
-            <button className="text-white hover:text-[#FF69B4]" aria-label="Toggle dark mode">
-              <Sun size={20} />
-            </button>
-            <button
-              className="md:hidden text-white"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          
         </div>
       </div>
       {isMenuOpen && (

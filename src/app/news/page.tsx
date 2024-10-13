@@ -1,10 +1,16 @@
-
-'use client';
+"use client";
 
 import React from "react";
-import Image from 'next/image';
-import Link from 'next/link';
-import { IconNewSection, IconNews, IconChartInfographic, IconBuildingSkyscraper, IconCoin, IconWorldWww } from "@tabler/icons-react";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  IconNewSection,
+  IconNews,
+  IconChartInfographic,
+  IconBuildingSkyscraper,
+  IconCoin,
+  IconWorldWww,
+} from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 
 const BentoGrid = ({
@@ -17,7 +23,7 @@ const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto",
+        "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto ",
         className
       )}
     >
@@ -62,15 +68,16 @@ const BentoGridItem = ({
 
 const items = [
   {
-    title: "CEO Yurika Adler, VivaTech's Top 30 Female Entrepreneurs... Only in Korea",
-    description: "CEO Yurika Adler, VivaTech's Top 30 Female Entrepreneurs... Only in Korea",
+    title: "Adler in Carrousel du Louvre, Paris",
+    description:
+      "Adler participated as the main technical partner at 2022 Focus Paris, held at 'Carrousel du Louvre'. We provided global artists with new and immersive VR spaces to showcase their artwork.",
     header: (
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
-        <Image 
-          src="/images/timesquare/2.png" 
-          alt="CEO Yurika Adler" 
-          width={800} 
-          height={400} 
+        <Image
+          src="/images/news/paris.png"
+          alt="VIVA TECH TOP 30"
+          width={800}
+          height={400}
           className="w-full h-full object-cover"
         />
       </div>
@@ -78,15 +85,16 @@ const items = [
     icon: <IconNewSection className="h-4 w-4 text-pink-500" />,
   },
   {
-    title: "Global Inflation Rates",
-    description: "Analysis of worldwide inflation trends and their impact on economies.",
+    title: "Adler secures 1.5B won investment, advances global 3D tech agenda",
+    description:
+      "Yurica Ovaerenue founder of 3D startup Adler, was selected as one of the 'Top 30 Female Entrepreneurs' by VivaTech, the largest startup event in Europe.",
     header: (
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
-        <Image 
-          src="/images/features/2.gif" 
-          alt="Global Inflation Rates" 
-          width={400} 
-          height={200} 
+        <Image
+          src="/images/features/2.gif"
+          alt="1.5 B WON Funding"
+          width={400}
+          height={200}
           className="w-full h-full object-cover"
         />
       </div>
@@ -94,15 +102,17 @@ const items = [
     icon: <IconChartInfographic className="h-4 w-4 text-pink-500" />,
   },
   {
-    title: "Tech Industry Layoffs",
-    description: "Exploring the recent wave of job cuts in the technology sector.",
+    title:
+      "World's first 3D real-time Ad <Get Control> in Times Square NYC",
+    description:
+      "In Times Square, World's First 3D Real-Time Ad Takes Center Stage on Iconic New York Times Square Billboard",
     header: (
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
-        <Image 
-          src="/images/features/3.jpg" 
-          alt="Tech Industry Layoffs" 
-          width={400} 
-          height={200} 
+        <Image
+          src="/images/news/ny.png"
+          alt="Tech Industry Layoffs"
+          width={400}
+          height={200}
           className="w-full h-full object-cover"
         />
       </div>
@@ -110,15 +120,16 @@ const items = [
     icon: <IconBuildingSkyscraper className="h-4 w-4 text-pink-500" />,
   },
   {
-    title: "Cryptocurrency Market Update",
-    description: "Latest trends and developments in the world of digital currencies.",
+    title: "CEO Yurika Ovarenue, VivaTech's Top 30 Female Entrepreneurs...",
+    description:
+      "Founder of 3D startup Adler, was selected as one of the 'Top 30 Female Entrepreneurs' by VivaTech, the largest startup event in Europe",
     header: (
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
-        <Image 
-          src="/images/cryptocurrency.jpg"  // Update this path to the correct image source
-          alt="Cryptocurrency Market Update" 
-          width={400} 
-          height={200} 
+        <Image
+          src="/images/news/viva.png"
+          alt="/VIVA"
+          width={400}
+          height={200}
           className="w-full h-full object-cover"
         />
       </div>
@@ -126,15 +137,16 @@ const items = [
     icon: <IconCoin className="h-4 w-4 text-pink-500" />,
   },
   {
-    title: "AI in Web Development",
-    description: "How artificial intelligence is shaping the future of web design and development.",
+    title: "Adler 3D v4 Launches with Cutting-Edge Features at GITEX 2024",
+    description:
+      "Explore the latest version of Adler 3D with Studio XRML enhancements and Atom's innovative new assets, delivering a more immersive and accessible 3D creation experience. Visit us at Dubai Trade Center, Booth 119.4 during GITEX 2024.",
     header: (
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
-        <Image 
-          src="/images/ai-web-development.jpg"  // Update this path to the correct image source
-          alt="AI in Web Development" 
-          width={400} 
-          height={200} 
+        <Image
+          src="/"
+          alt="AI in Web Development"
+          width={400}
+          height={200}
           className="w-full h-full object-cover"
         />
       </div>
@@ -142,15 +154,15 @@ const items = [
     icon: <IconWorldWww className="h-4 w-4 text-pink-500" />,
   },
   {
-    title: "Breaking News",
-    description: "Stay updated with the latest happenings around the world.",
+    title: "Blankkkk",
+    description: "afnadjsnfksadnf",
     header: (
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
-        <Image 
-          src="/images/breaking-news.jpg"  // Update this path to the correct image source
-          alt="Breaking News" 
-          width={400} 
-          height={200} 
+        <Image
+          src="/images/news/viva.png"
+          alt=""
+          width={400}
+          height={200}
           className="w-full h-full object-cover"
         />
       </div>
@@ -159,12 +171,14 @@ const items = [
   },
 ];
 
-export function Lnews() {
+export default function News() {
   return (
     <div className="container mx-auto text-black px-4 py-8">
       <h1 className="text-4xl font-bold mb-2">Latest Adler</h1>
-      <h2 className="text-3xl font-bold text-pink-500 mb-8">News and Insights</h2>
-      
+      <h2 className="text-3xl font-bold text-pink-500 mb-8">
+        News and Insights
+      </h2>
+
       <BentoGrid className="max-w-7xl mx-auto">
         {items.map((item, i) => (
           <BentoGridItem
@@ -179,7 +193,10 @@ export function Lnews() {
       </BentoGrid>
 
       <div className="mt-8 text-center">
-        <Link href="/news" className="inline-block bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600 transition-colors">
+        <Link
+          href="/news"
+          className="inline-block bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600 transition-colors"
+        >
           View All News
         </Link>
       </div>

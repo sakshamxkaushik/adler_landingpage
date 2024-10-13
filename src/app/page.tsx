@@ -1,12 +1,13 @@
 import React from 'react'
-import { Header } from "@/sections/Header"
 import LandingPageWrapper from '@/components/landing-page'
-import FeaturePage from '@/components/featurepage'
+import { Header } from "@/sections/Header"
+import FeaturePage from '@/app/feature/page'
 import { UseCasesCarousel } from '@/components/UseCasesCarousel'
 import { Gallery } from '@/components/app-gallery-page'
+import  News  from '@/app/news/page'
+import Timeline from '@/app/Timeline/Timeline'
 import Footer from "@/sections/Footer"
-import { Lnews } from '@/components/l_news'
-import Timeline from '@/components/Timeline'
+
 
 export default function Home() {
   return (
@@ -24,10 +25,10 @@ export default function Home() {
       <section id="gallery">
         <Gallery />
       </section>
-      <section id="news" className="bg-gray-50 dark:bg-gray-900">
-        <Lnews />
+      <section id="news" className="bg-white">
+        <News />
       </section>
-      <section id="timeline">
+      <section id="timeline" className="bg-white">
         <Timeline />
       </section>
       <Footer />
