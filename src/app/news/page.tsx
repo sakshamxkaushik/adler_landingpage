@@ -143,7 +143,7 @@ const items = [
     header: (
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
         <Image
-          src="/"
+          src="/images/news/gitex.png"
           alt="AI in Web Development"
           width={400}
           height={200}
@@ -154,12 +154,12 @@ const items = [
     icon: <IconWorldWww className="h-4 w-4 text-pink-500" />,
   },
   {
-    title: "Blankkkk",
-    description: "afnadjsnfksadnf",
+    title: "Our Office Expansion in Seoul, South Korea",
+    description: "Address : 2nd floor, 25, 224-gil Nambusunhwan-ro, Gwanak-gu, Seoul Addr. Seoul, Korea | Biz License 772-88-02469 TEL : 02.874.6182 ",
     header: (
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
         <Image
-          src="/images/news/viva.png"
+          src="/images/news/image.png"
           alt=""
           width={400}
           height={200}

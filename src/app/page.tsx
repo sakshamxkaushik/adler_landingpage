@@ -15,21 +15,21 @@ export default function Home() {
       <Header />
       <section id="landing" className="flex-grow">
         <LandingPageWrapper />
-      </section>
+      {/* </section>
       <section id="features">
-        <FeaturePage />
+        <FeaturePage /> */}
       </section>
       <section id="use-cases" className="overflow-hidden">
         <UseCasesCarousel />
       </section>
-      <section id="gallery">
+      <section id="gallery" className="bg-white">
         <Gallery />
       </section>
       <section id="news" className="bg-white">
         <News />
-      </section>
+      {/* </section>
       <section id="timeline" className="bg-white">
-        <Timeline />
+        <Timeline /> */}
       </section>
       <Footer />
     </main>

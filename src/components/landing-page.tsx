@@ -39,9 +39,12 @@ export default function LandingPage() {
             <p className="text-lg sm:text-xl md:text-2xl mb-8">
               Transform Your Ideas into Reality
             </p>
-            <Button className="bg-[#FC2D7C] hover:bg-[#1F1F1F] text-white text-lg py-2 px-6">
-              Get Started
-            </Button>
+            <a href="https://www.adler3d.com/">
+  <Button className="bg-[#FC2D7C] hover:bg-[#1F1F1F] text-white text-lg py-2 px-6">
+    Get Started
+  </Button>
+</a>
+
           </div>
           <div className="row-start-3 self-end pb-8 text-center">
             <p className="text-sm mb-2">Scroll Down</p>

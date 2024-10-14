@@ -42,9 +42,9 @@ function AutoScrollCarousel({ images, direction }: AutoScrollCarouselProps) {
   }
 
   return (
-    <div ref={ref} className="overflow-hidden h-[225px] relative group">
+    <div ref={ref} className="overflow-hidden h-[225px] relative group bg-white">
       <motion.div
-        className="flex cursor-grab active:cursor-grabbing"
+        className="flex cursor-grab active:cursor-grabbing bg-white"
         animate={controls}
         drag="x"
         dragControls={dragControls}
@@ -57,7 +57,7 @@ function AutoScrollCarousel({ images, direction }: AutoScrollCarouselProps) {
             className="w-[400px] h-[225px] flex-shrink-0 p-2"
             onClick={handleImageClick}
           >
-            <div className="w-full h-full relative rounded-lg overflow-hidden shadow-md">
+            <div className="w-full h-full relative rounded-lg overflow-hidden shadow-md bg-white ">
               <Image
                 src={src}
                 alt={`Gallery Image ${idx + 1}`}
@@ -68,7 +68,7 @@ function AutoScrollCarousel({ images, direction }: AutoScrollCarouselProps) {
           </div>
         ))}
       </motion.div>
-      <div className="absolute top-2 right-2 bg-black bg-opacity-50 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+      <div className="absolute top-2 right-2 bg-opacity-50 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity bg-white">
         {isPaused ? (
           <Play className="w-6 h-6 text-white" />
         ) : (
@@ -95,7 +95,7 @@ const bottomRowImages = [
 
 export function Gallery() {
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8 ">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold text-center text-gray-900 mb-12">
           Adler Gallery
