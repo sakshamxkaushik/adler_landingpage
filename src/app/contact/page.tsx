@@ -32,6 +32,12 @@ export default function Contact() {
               strategy@adler.cx
             </a>
           </div>
+          <div className="text-center">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-2">CEO Office</h2>
+            <a href="mailto:ceo@adler.cx" className="text-pink-500 hover:text-pink-600 text-lg">
+              yurica.ovarenue@adler.cx
+            </a>
+          </div>
         </div>
       </div>
     </div>

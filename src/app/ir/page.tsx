@@ -21,16 +21,16 @@ const timelineEvents = [
     year: 2021,
     events: [
       { date: "Aug.", description: "Adler Inc. is established" },
-      { date: "Sept.", description: "Raises 390 mil. KRW from angel investor" },
+      { date: "Sept.", description: "Raises $300,000 from angel investor" },
     ],
   },
   {
     year: 2022,
     events: [
-      {
+      { // $320,000 OR $3.2M
         date: "Feb.",
         description:
-          "Launches Alpha version\nRaises 500 mil. KRW in seed funding",
+          "Launches Alpha version\nRaises $370,000  in seed funding",
       },
       {
         date: "Apr.",
