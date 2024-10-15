@@ -15,9 +15,9 @@ export default function Home() {
       <Header />
       <section id="landing" className="flex-grow">
         <LandingPageWrapper />
-      {/* </section>
+      </section>
       <section id="features">
-        <FeaturePage /> */}
+        <FeaturePage />
       </section>
       <section id="use-cases" className="overflow-hidden">
         <UseCasesCarousel />
